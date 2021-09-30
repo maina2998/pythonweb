@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <style>
+
+    body{background-color: rgb(161, 162, 228);
+    padding: 150px;
+    align-items: center;
+    height: 180vh;
+    display: flex;
+    justify-content: center;
+    color: black;
+    }
+    form{
+        max-width: 650px;
+        width: 90%;
+        background-color: rgb(249, 252, 255);
+        margin-left: 100px;
+        text-align: left;
+        padding: 25px;
+         }
+    input[type=text], select, textarea {
+        width: 96%;
+      outline: none;
+      border: 1px solid;
+      font-size: 15px;
+      padding: 8px 10px;
+      border-radius: 20px;
+      text-align: left;
+      margin-bottom: 1%;
+    }
+    button{
+        align-items: 45%;
+        margin-left: 45%;
+        top: 30px;
+        width: 90px;
+        height: 30px;
+        font-size: 20px;
+        color: rgb(80, 6, 80);
+        border-radius: 20px;
+        margin-bottom: 20px;
+        
+    }
+    h1{
+        text-align: center;
+        color: purple;
+        font-size: 50px;
+    }
+ 
+    </style>
+  
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <img src="https://i.ytimg.com/vi/95jKN4q7_w0/maxresdefault.jpg" alt="" width ="650" height="250">
+        <h1>Courses Registration Form</h1>
+        {{form.as_p}}
+
+        <button>
+            SUBMIT
+        </button>
+       
+    </form>
+
+
+    
+    
+</body>
+</html>

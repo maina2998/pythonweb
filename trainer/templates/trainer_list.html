@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Trainer_list</title>
+</head>
+<body>
+<table>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Age</th>
+<th>profile_photo</th>
+
+<th>Email</th>
+<th>languages</th>
+<th>training_day</th>
+
+<th>Gender</th>
+<th>Phone Number</th>
+<th>date_joined</th>
+<th>bio</th>
+<th>contract</th>
+<th>date_hired</th>
+
+</tr>
+<tr>
+{%for trainer in trainers%}
+<td>{{trainer.first_name}}</td>
+<td>{{trainer.last_name}}</td>
+<td>{{trainer.age}}</td>
+{% if trainer.profile_photo %}
+<td><img src="{{trainer.profile_photo.url}}" width="60px" height="60px"></td>
+{% endif %}
+<td>{{trainer.email}}</td>
+<td id="languages">{{trainer.languages}}</td>
+<td>{{trainer.training_day}}</td>
+<td >{{trainer.gender}}</td>
+<td>{{trainer.phone_number}}</td>
+<td>{{trainer.date_joined}}</td>
+<td>{{trainer.bio}}</td>
+<td>{{trainer.contract}}</td>
+<td>{{trainer.date_hired}}</td>
+
+
+</tr>
+{% endfor %}
+</table>
+<style>
+body{
+    background-color: rgb(226, 220, 193);
+    }
+table{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    table-layout:auto;
+    border-collapse: collapse;
+}
+table,tr,th,td{
+    padding: 20px;
+    color: rgb(8, 12, 11);
+    border: 1px solid rgb(6, 61, 99);
+    border-collapse: collapse;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(top,rgb(128, 88, 143) 0%,rgb(178, 104, 180) 100%);
+    text-align: center;
+    margin-top: 40px;
+}
+
+h1{
+    text-align: center;
+    color: rgb(82, 226, 226);
+    padding-top: 10%;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #48064f;
+  color: white;
+}
+table, th, td {
+  border: 2px solid black;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+</style>
+</body>
+</html>

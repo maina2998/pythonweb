@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Student_list</title>
+</head>
+<body>
+<table>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Age</th>
+<th>Date Of Birth</th>
+<th>Email</th>
+<th>Phone Number</th>
+<th>medical_report</th>
+<th>Laptopserial Number</th>
+<th>parent_name</th>
+<th>parent_number</th>
+<th>class_name</th>
+<th>profile_photo</th>
+<th>room_number</th>
+
+</tr>
+{%for student in students%}
+<tr>
+<td>{{student.first_name}}</td>
+<td>{{student.last_name}}</td>
+<td>{{student.age}}</td>
+<td>{{student.date_of_birth}}</td>
+<td>{{student.email}}</td>
+<td>{{student.phone_number}}</td>
+<td>{{student.medical_report}}</td>
+<td>{{student.laptop_serial_number}}</td>
+<td>{{student.parent_names}}</td>
+<td>{{student.parents_number}}</td>
+<td>{{student.class_name}}</td>
+{% if student.profile_photo %}
+<td><img src="{{ student.profile_photo.url}}" width="60" height="60"></td>
+{% endif %}
+<td>{{student.room_number}}</td>
+
+</tr>
+{% endfor %}
+</table>
+<style>
+body{
+      background-color: rgb(226, 220, 193);
+    }
+table{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    table-layout:auto;
+}
+table,tr,th,td{
+    padding: 20px;
+    color: rgb(13, 15, 15);
+    border: 1px solid rgb(6, 61, 99);
+    border-collapse: collapse;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(top,rgb(130, 238, 229) 0%,rgb(145, 241, 212) 100%);
+    text-align: center;
+    margin-top: 40px;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+h1{
+    text-align: center;
+    color: rgb(151, 11, 133);
+    padding-top: 10%;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #48064f;
+  color: white;
+}
+table, th, td {
+  border: 2px solid black;
+}
+</style>
+</body>
+</html>

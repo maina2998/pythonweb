@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Courses_list</title>
+</head>
+<body>
+<table>
+<tr>
+<th>course_name</th>
+<th>date_started</th>
+<th>syllabus</th>
+<th>course_id</th>
+<th>course_code</th>
+<th>course_duration</th>
+
+</tr>
+<tr>
+{%for course in courses%}
+<td>{{course.course_name}}</td>
+<td>{{course.date_started}}</td>
+<td>{{course.syllabus}}</td>
+<td>{{course.course_id}}</td>
+<td>{{course.course_code}}</td>
+<td>{{course.course_duration}}</td>
+
+</tr>
+{% endfor %}
+</table>
+<style>
+body{
+    background-color: rgb(226, 220, 193);
+    }
+table{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    table-layout:auto;
+}
+table,tr,th,td{
+    padding: 20px;
+    color: rgb(8, 8, 8);
+    border: 1px solid rgb(6, 61, 99);
+    border-collapse: collapse;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(top,rgb(130, 238, 229) 0%,rgb(145, 241, 212) 100%);
+    text-align: center;
+    margin-top: 40px;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+h1{
+    text-align: center;
+    color: purple;
+    padding-top: 10%;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #48064f;
+  color: white;
+}
+table, th, td {
+  border: 2px solid black;
+}
+</style>
+</body>
+</html>

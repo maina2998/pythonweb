@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="profile">
+        <td><img src="{{trainer.profile_photo.url}}"></td>
+ <h2>{{trainer.full_name}}</h2>
+ <h2>{{trainer.age}} years old</h2>
+ <h2>{{trainer.email}}</h2>
+ <h2>{{trainer.phone_number}}</h2>
+ <h2>{{trainer.class_name}}</h2>
+    </div>
+</body>
+<style>
+    .profile{
+        
+    border: 1px ;
+    border-radius: 10px;
+    box-shadow: 3px 4px #4f0542;
+    height: 530px;
+    width: 400px;
+    margin-left: 500px;
+    text-align: center;
+    background-color:rgb(175, 170, 175);
+    }
+    
+    
+    h2{
+        font-size: 20px;
+    }
+    img{
+      padding-top: 5px;
+      border-radius: 10px;
+       height: 70px;
+       width: 300px;
+    }
+</style>
+</html>
